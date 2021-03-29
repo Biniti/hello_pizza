@@ -1,0 +1,340 @@
+*{
+    padding: 0;
+    margin:0;
+    font-size:10px;
+    /*box-sizing: border-box;*/
+}
+
+:root{
+
+    --bg-primary:#060606;
+    --bg-secondary: rgba(0, 0, 0, 0.5);
+    
+    --text-primary:#fff;
+    --text-secondary:#ff4500;
+
+    --positive-text: #87B50F;
+    --negative-text: #FB3958;
+
+}
+
+body{
+    font-family: "Helvetica Neue", sans-serif;
+     background-color: var(--bg-primary);
+
+}
+
+.container{
+    /*display flex vai deixar a tela flexivel, 
+    tudo que a gente mexer vai se auto ajustar*/
+    display:flex;
+
+    justify-content:center;
+    /*justify-content acessa o eixo X do item*/
+
+    align-items: center;
+    /*aling-items ajusta no eixo Y do item*/
+
+    flex-direction:column;
+    /*Flex-direction:column; ele inverte 
+    os valores de acesso do 
+    align items e do justify content
+    ou seja o justify-content acessa o eixo Y
+    e o align-items acessa o exio X*/
+
+    padding: 0 2rem;
+
+    background-image: url(../img/background-pizza.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: var(--text-primary);
+}
+
+
+.container header{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background-color: rgba(0,0,0, 0.5);
+    width: 100%;
+    padding:3rem 2rem;
+}
+
+.container header h1{
+    
+    margin-right:auto ;
+
+}
+
+.container header h1 img{
+
+    width: 20rem;
+
+}
+
+.container header nav{
+
+        width: 15rem;
+        margin-left: 1rem;
+
+        /*rem é unidade de medida
+        1rem == 10 pixels
+        e 15rem é o valor do rem multiplicado pelo px do total*/
+}
+
+.container header nav ul{
+    display:flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    justify-content:space-between;
+
+    flex-direction: row;
+    /*flex-directo:row é pra deixar em linhas */
+}
+
+.container header nav ul li{
+
+    list-style-type: none;
+
+    margin-right: 0.8rem;
+}
+
+
+.container header nav ul li a{
+    text-decoration: none;
+
+    font-size: 1.2rem; 
+
+    font-weight: bold;
+
+    color: var(--text-primary);
+
+    transition: all 0.2s;
+
+}
+
+.container header nav ul li a:hover{
+
+    opacity: 0.6;
+    color: var(--text-secondary);
+
+}
+
+.container #sabores-pizza{
+    
+    display:flex;
+
+    align-items: center;
+
+    justify-content:center;
+
+    flex-direction:column;
+
+    margin-top: 8rem;
+
+    padding-bottom: 6rem;
+
+}
+
+#sabores-pizza h2{
+    text-align: center;
+    
+    text-transform: uppercase;
+
+    text-shadow: 20px 2px 10px var(--bg-primary);
+
+    font-size:1.2rem;
+
+    color: var(--text-primary);
+
+    line-height: 2;
+
+
+}
+
+
+#sabores-pizza table{
+    
+    width: 100%;
+
+    margin-top: 6rem;
+
+    background-color: var(--bg-primary);
+
+    border-collapse: collapse;
+
+    clear: both;
+
+    text-transform: uppercase;
+
+}
+
+#sabores-pizza table th, td{
+
+    font-size: 1rem;
+
+    border: 1px solid var(--bg-primary);
+
+    padding: 0.3rem;
+
+    text-align: center;
+
+
+}
+
+#sabores-pizza table th{
+    font-weight: bold;
+
+}
+
+
+#sabores-pizza .text-negativo{
+
+    color: var(--negative-text);
+
+}
+
+#sabores-pizza .text-positivo{
+
+    color: var(--positive-text);
+}
+
+footer{
+    
+    display:flex;
+
+    align-items: center;
+
+    flex-direction: column;
+
+    padding: 3.5rem 0 1rem 0;
+
+    margin-bottom: 1.5rem;
+}
+
+footer a{
+    
+    margin: 0 auto;
+
+    height: 7rem;
+    width: 30.4rem;
+
+    background-image: url(../img/logo-helloPizza.png);
+}
+
+
+footer p{
+
+    margin-top: 1rem;
+
+    font-size: 1.2rem;
+
+    font-weight: bold;
+
+}
+
+
+@media(min-width: 600px){
+
+    /*usando o media para deixar responsivo tanto pra pc quando smartphone
+    @media estamos selecionando 
+    o minimo da largura pra 600px
+    ou seja, se a largura da tela tiver no minimo 600px
+    vamos fazer as alteraçoes abaixo*/
+
+    .container header nav{
+        margin: 0  2rem 0 0;
+    }
+
+
+    .container header nav ul li a{
+
+        font-size: 1.5rem;
+    }
+
+
+    #sabores-pizza{
+        margin-top: 15rem;
+        
+    }
+
+    #sobres-pizza h2{
+        line-height: 6;
+    }
+
+    #sabores-pizza table th, td{
+        font-size: 1.3rem;
+        padding: 1rem;
+
+    }
+
+}
+
+@media(min-width: 768px){
+
+    .container header nav{
+
+        width: 20rem;
+
+    }
+
+    #sabores-pizza{
+        margin-top: 20rem;
+    }
+
+    #sabores-pizza h2{
+        font-size:1.8rem;
+    }
+
+    #sabores-pizza table th,td{
+        padding:2rem;
+
+    }
+
+}
+
+
+@media(min-width: 992px){
+    .container header h1 img {
+        width: 30rem;
+
+    }
+
+    #sabores-pizza{
+        margin-top:28rem;
+    }
+
+    #sabores-pizza h2{
+        font-size:2.5rem;
+    }
+
+    #sabores-pizza table th,td{
+        padding:3rem;
+        font-size:1.6rem;
+    }
+
+
+
+}
+
+@media(min-width: 1200px){
+    #sabores-pizza{
+        margin-top: 35rem;
+
+    }
+
+    #sabores-pizza h2{
+        font-size: 3rem;
+    }
+
+    #sabores-pizza table th, td{
+        padding: 3.5rem;
+        font-size: 2rem;
+
+    }
+}
+

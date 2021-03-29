@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href = "./style/pedido.css">
+    <title>Hello pizza</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>
+          <img src="./img/logo-helloPizza.png" alt="logo" />
+        </h1>
+
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sabores</a></li>
+            <li><a href="#">Contatos</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      
+        <div id="sabores-pizza">
+          <h2>Conheça nossos sabores exclusivos de pizza</h2>
+
+          <table>
+            <tr>
+              <th>Pizzas</th>
+              <th>Queijo e Molho</th>
+              <th>Salada</th>
+              <th>Carne</th>
+              <th>Azeite/Chapigon</th>
+            </tr>
+
+            <tr>
+              <td>Mozzarella</td>
+              <td rowspan="5" class="text-positivo">Sim</td>
+              <td class="text-negativo">Não</td>
+              <td class="text-negativo">Não</td>
+              <td class="text-negativo">Não</td>
+            </tr>
+
+            <tr>
+              <td>Calabresa</td>
+              <td class="text-positivo">Sim</td>
+              <td class="text-negativo">Não</td>
+              <td class="text-negativo">Não</td>
+            </tr>
+
+            <tr>
+              <td>Quatro queijos</td>
+              <td class="text-negativo">Não</td>
+              <td class="text-positivo">Sim</td>
+              <td class="text-positivo">Sim</td>
+            </tr>
+
+            <tr>
+              <td>Pepperoni</td>
+              <td class="text-positivo">Sim</td>
+              <td class="text-negativo">Não</td>
+              <td class="text-negativo">Não</td>
+            </tr>
+
+            <tr>
+              <td>Marguerita</td>
+              <td class="text-positivo">Sim</td>
+              <td class="text-positivo">Sim</td>
+              <td class="text-positivo">Sim</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="pedido">
+          <h2>Pedido</h2>
+
+          <form name="pedido">
+            <table>
+              <thead>
+                <tr>
+                  <th>Sabor</th>
+                  <th>Quantidade</th>
+                  <th>Preço por unidade</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr class="item">
+                  <td>Calabresa</td>
+                  <td>
+                    <a class="btn-decrementa">-</a>
+                    <input
+                      max="9"
+                      class="quantidade"
+                      value="0"
+                      type="number"
+                      name="Calabresa"
+                      disabled
+                    />
+
+                    <a class="btn-incrementa">+</a>
+                  </td>
+
+                  <td class="preco-item">12.50</td>
+                </tr>
+
+                <tr class="item">
+                  <td>Mozzarella</td>
+                  <td>
+                    <a class="btn-decrementa">-</a>
+                    <input
+                      max="9"
+                      class="quantidade"
+                      value="0"
+                      type="number"
+                      name="Mozzarella"
+                      disabled
+                    />
+
+                    <a class="btn-incrementa">+</a>
+                  </td>
+
+                  <td class="preco-item">12.50</td>
+                </tr>
+
+                <tr class="item">
+                  <td>Pepperoni</td>
+                  <td>
+                    <a class="btn-decrementa">-</a>
+                    <input
+                      max="9"
+                      class="quantidade"
+                      value="0"
+                      type="number"
+                      name="Pepperoni"
+                      disabled
+                    />
+
+                    <a class="btn-incrementa">+</a>
+                  </td>
+
+                  <td class="preco-item">14.00</td>
+                </tr>
+
+                <tr class="item">
+                  <td>Marguerita</td>
+                  <td>
+                    <a class="btn-decrementa">-</a>
+                    <input
+                      max="9"
+                      class="quantidade"
+                      value="0"
+                      type="number"
+                      name="Marguerita"
+                      disabled
+                    />
+
+                    <a class="btn-incrementa">+</a>
+                  </td>
+
+                  <td class="preco-item">13.00</td>
+                </tr>
+
+                <tr class="item">
+                  <td>Quatro queijos</td>
+                  <td>
+                    <a class="btn-decrementa">-</a>
+                    <input
+                      max="9"
+                      class="quantidade"
+                      value="0"
+                      type="number"
+                      name="Quatro-queijos"
+                      disabled
+                    />
+
+                    <a class="btn-incrementa">+</a>
+                  </td>
+
+                  <td class="preco-item">15.50</td>
+                </tr>
+              </tbody>
+
+              <tfoot>
+                <tr>
+                  <td colspan="2">Total</td>
+                  <td id="total">0</td>
+                </tr>
+              </tfoot>
+            </table>
+
+            <input type="submit" value="Enviar" />
+          </form>
+        </div>
+    
+
+      <footer>
+        <a href = "#"></a>
+        
+        <p>Todos os direitos reservados &copy; 2021</p>
+      </footer>
+    </div>
+    <script src = "./js/app.js"></script>
+  </body>
+</html>

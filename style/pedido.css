@@ -1,0 +1,185 @@
+.pedido{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+
+
+.pedido h2{
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px #2a2a2a;
+    font-size:1.2rem;
+
+    margin: 0;
+    line-height: 3;
+
+}
+
+
+.pedido table{
+    width: 100%;
+    margin-top: 6rem;
+
+
+    background-color: #2a2a2a;
+    border-collapse: collapse;
+    text-transform: uppercase;
+
+}
+
+.pedido table th{
+    color: #4D4D4D;
+    font-weight:bold;
+
+
+}
+
+.pedido table th, td{
+    font-size: 1rem;
+    border: 1px solid #000;
+    padding: 0.6rem;
+    width: 20%;
+
+}
+
+.pedido form{
+    
+    display:flex;
+    align-items:center;
+    justify-content:center;
+   flex-direction: column;
+    margin: 0 20%;
+}
+
+
+.pedido form input{
+    border: 1px solid #2a2a2a;
+    
+    width: 50rem;
+    height: 1rem;
+
+
+    border-radius: 3rem;
+    background-color: transparent;
+    padding: 2.5rem;
+    
+    text-transform: uppercase;
+    color:#fff;
+}
+
+.pedido form input[type = "submit"]{
+    width: 34rem;
+    margin: 2.5rem 0;
+    padding-top: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.pedido form input[type = "submit"]:hover{
+    opacity:0.6;
+    color:#FF4500;
+    border: 1px solid #FF4500;
+
+}
+
+.pedido form a{
+    cursor: pointer;
+    border: 1.3px solid #fff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 50%;
+}
+
+.pedido form a:hover{
+    background-color: #6D6D6D;
+}
+
+.pedido form a:active{
+    background-color: #777;
+
+}
+
+.pedido input.quantidade{
+    text-align: center;
+    border:none;
+    width: 3rem;
+    padding: 0.5rem 0;
+
+}
+
+.pedido form td:nth-child(2){
+    
+    min-width: 10rem;
+
+}
+
+@media(min-width: 500px){
+    .pedido form a{
+        padding: 0.8rem 1.4rem;
+    }
+
+    .pedido table th, td{
+        padding: 1.5rem;
+    }
+
+    .pedido input[type = "submit"]{
+        width: 38rem !important;
+    }
+
+    .pedido input.quantidade{
+        margin-left: 1.5rem;
+    }
+
+    .pedido form td:nth-child(2){
+        min-width:12.3rem;
+    }
+
+}
+
+
+@media(min-width: 768px){
+    .pedido h2{
+        font-size: 1.8rem;
+    }
+
+    .pedido form{
+        width: 45rem;
+    }
+
+    .pedido input[type = "submit"]{
+        width:40rem !important;
+    }
+    
+}
+
+@media(min-width: 992px){
+    .pedido h2{
+        font-size: 2.5rem;
+    }
+
+    .pedido form{
+        width: 50rem;
+    }
+
+    .pedido input[type = "submit"]{
+        width:45rem !important;
+    }   
+}
+
+
+@media(min-width: 1200px){
+       
+  .pedido form{
+        width: 60rem;
+    }
+    
+    .pedido input[type = "submit"]{
+        width:55rem !important;
+    }   
+
+    .pedido table th, td{
+        padding: 2.5rem;
+        font-size: 1.2rem;
+    }
+
+}
